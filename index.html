@@ -29,17 +29,17 @@
 </svg></a>
         <nav class="nav">
           <ul class="nav-list">
-            <li class="nav-list-item"><a href=#0 class="nav-list-items">главная</a></li>
-            <li class="nav-list-item"><a href=#0 class="nav-list-items">посты</a></li>
-            <li class="nav-list-item"><a href=#0 class="nav-list-items">статьи</a></li>
-            <li class="nav-list-item"><a href=#0 class="nav-list-items">теги</a></li>
-            <li class="nav-list-item"><a href=#0 class="nav-list-items">темы</a></li>
+            <li class="nav-list-item nav-list-item-main"><a href=#0 class="nav-list-items">главная</a></li>
+            <li class="nav-list-item nav-list-item-post"><a href=#0 class="nav-list-items">посты</a></li>
+            <li class="nav-list-item nav-list-item-article"><a href=#0 class="nav-list-items">статьи</a></li>
+            <li class="nav-list-item nav-list-item-tags"><a href=#0 class="nav-list-items">теги</a></li>
+            <li class="nav-list-item nav-list-item-items"><a href=#0 class="nav-list-items">темы</a></li>
             <li class="nav-list-item"><a href=#0 class="nav-list-items">контакты</a></li>
           </ul>
         </nav>
         <span class="visually-hidden">Кнопка открыть меню</span>
-        <button class="menu__button" type="button">
-          <span class="menu__button-label">открыть меню</span>
+        <button class="menu-button" type="button">
+          <span class="menu-button-label">открыть меню</span>
         </button>
       </div>
       <h1 class="header-title">Блог о творчестве, спорте,
@@ -301,11 +301,13 @@
           <span class="visually-hidden">Поле для ввода текста</span>
           <input type="search" placeholder="Найти..." class="search-line" required>
         </label>
-        
+        <label>
+          <div>
         <button type="submit" class="search-button" alt="кнопка поиска"><span class="visually-hidden">Кнопка поиска</span>
         <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 512 512"><g clip-path="url(#clip0)"><path fill="#fff" stroke="#B59F5B" d="M373.403 339.292l-.29.344.312.324 121.857 126.737c10.117 10.524 9.782 27.302-.733 37.42l.347.36-.347-.36c-4.948 4.763-11.466 7.383-18.338 7.383-7.261 0-14.034-2.884-19.072-8.116L334.357 375.686l-.297-.309-.351.246c-34.78 24.442-75.457 37.317-118.145 37.317-113.708 0-206.22-92.513-206.22-206.22C9.344 93.012 101.856.5 215.564.5c113.707 0 206.22 92.512 206.22 206.22 0 48.668-17.125 95.416-48.381 132.572zm-4.546-132.572c0-84.528-68.765-153.293-153.293-153.293S62.271 122.192 62.271 206.72s68.765 153.293 153.293 153.293 153.293-68.765 153.293-153.293z"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h512v512H0z"/></clipPath></defs></svg>
         </button>
-        
+        </div>
+        </label>
       </form>
 
       <section class="mail">
@@ -544,5 +546,59 @@
     <p>Copyright © 2009–2019 City Blog LLC.</p>
   </a>
 </footer>
+
+
+
+
+<div class="popup">
+<div class="popup-container">
+  <div>
+  <div class="feedback-title">
+    <h2>ваш фидбек</h2>
+      </div>
+  <div class="feedback">
+  <form class="feedback-form">
+  
+  <div class="search-field-box">
+  <label class="feedback-label">Как часто вы заходите на сайт?</label>
+          <span class="visually-hidden">Поле для ввода текста</span>
+          <input type="search" placeholder="Почти каждый день" class="feedback-field" required>
+    </div>
+    
+  <div>
+    <span class="feedback-label">Вы подписаны на e-mail рассылку?</span>
+  <label class="radio-group">
+    <span class="visually-hidden">Кнопка да</span>
+    <input type="radio" class="radio" name="radio-group">
+    <span class="radio-group-text">Да</span>
+  </label>
+  <label class="radio-group radio-group-no">
+    <span class="visually-hidden">Кнопка нет</span>
+    <input type="radio" class="radio" name="radio-group">
+    <span class="radio-group-text-no">Нет</span>  
+  </label>
+  </div>
+
+  <div>
+  <label>
+    <span class="feedback-label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+    <span class="visually-hidden">Поле для ввода текста</span>
+    <textarea class="feedback-area" placeholder="Может, больше рецептов?" required></textarea>
+  </label>
+  </div>
+
+  <div>
+  <span class="visually-hidden">Кнопка отправить</span>
+  <button class="feedback-button" type="submit">Отправить</button>
+  </div>
+</form>
+</div>
+  </div>
+    <span class="visually-hidden">Кнопка закрыть окно</span>
+  <button class="popup-close visually-hidden" type="button">Закрыть окно</button>
+  <svg class="popup-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 441 441"><path fill="#fff" stroke="#000" d="M220.336 170.564l.353.353.354-.353L390.288 1.318l49.796 49.773-169.269 169.245-.353.354.353.354 169.269 169.245-49.796 49.796-169.245-169.269-.354-.353-.353.353-169.27 169.269-49.748-49.796 169.245-169.245.353-.354-.353-.354L1.318 51.067 51.09 1.318l169.246 169.246z"/></svg>
+</div>
+</div>
+
 </body>
 </html>
