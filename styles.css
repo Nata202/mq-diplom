@@ -474,6 +474,7 @@ li {
   margin-top: 60px;
   display: flex;
   width: 100%;
+  position: relative;
 }
 
 .visually-hidden {
@@ -497,6 +498,7 @@ li {
   outline: 1px solid #b59f5b;
 }
 
+
 .search-button {
   border: none;
   width: 48px;
@@ -505,18 +507,25 @@ li {
   background-color: #b59f5b;
 }
 
-.search__icon {
+.search-icon {
+  position: absolute;
   width: 22px;
   height: 22px;
   background-size: 16px;
   background-position: center;
   background-color: #b59f5b;
+  top: 13px;
+  right: 13px;
 }
 
-
-.search-button:hover + .search__icon {
+.search-button:hover {
   background-color: #323232;
 }
+
+.search-button:hover + .search-icon {
+  background-color: #323232;
+}
+
 
 .search-button:focus  {
   outline: 3px solid #ccc370;
@@ -774,7 +783,8 @@ li {
   line-height: 1.4;
   color: #0d0b0c;
   font-weight: 400;
-  font-family: "Open Sans"
+  font-family: "Open Sans";
+  padding-top: 12px;
 }
 
 .shop-link {
@@ -793,6 +803,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  font-family: "Open Sans";
   width: 300px;
   margin-top: 25px;
   margin-botton: 25px;
@@ -804,10 +815,15 @@ li {
 
 .shop-price {
   font-size: 24px;
+  font-family: "Open Sans";
   font-weight: 700;
   color: #222;
   line-height: 1;
   display: flex;
+}
+
+.shop-price-value {
+  font-family: "Open Sans"
 }
 
 .shop-price-old {
@@ -818,6 +834,7 @@ li {
 
 .shop-rub {
   margin-left: 6px;
+  font-family: "Open Sans"
 }
 
 .button-shop {
@@ -1175,11 +1192,12 @@ li {
 
   .main {
     margin-right: 35px;
-
+    width: 100%;
+    margin: auto;
   }
 
   .aside {
-    width: 268px;
+    width: 270px;
   }
 
   .news {
@@ -1189,7 +1207,7 @@ li {
     margin-bottom: 0;
   }
 
-  .news__after:after {
+  .news-after:after {
   content: "";
   display: block;
   margin: 0 auto;
@@ -1205,12 +1223,12 @@ li {
     height: 301px;
   }
 
-  .new__links {
+  .new-links {
     padding-top: 17px;
   }
 
   .aside {
-    width: 273px;
+    width: 270px;
   }
 
   .shop-section {
@@ -1220,15 +1238,56 @@ li {
     padding-right: 57px;
   }
 
+
   .shop-item {
-    width: 49%;
-    margin-right: 1%;
-    margin-bottom: 62px;
+    width: 43%;
+    padding-bottom: 62px;
   }
 
+  .shop-items {
+    max-width: 1199px;
+    margin: auto;
+  }
+
+  .shop-item-one {
+   margin-right: 70px;
+  }
+
+  .shop-box {
+    width: 293px;
+  }
+
+  .heading-item {
+    font-size: 17px;
+
+  }
+
+  .heading-item:hover {
+    font-size: 17px;
+  }
+
+  .text-shop {
+    font-size: 13px;
+  }
+
+  .shop-link:hover {
+    font-size: 13px;
+  }
+
+  .shop-price-value {
+    font-size: 20;
+  }
+
+  .shop-price-old {
+    font-size: 12px;
+  }
+
+
+  
+
   .footer {
-    margin-right: 2%;
-    margin-left: 2%;
+    margin-right: 34px;
+    margin-left: 34px;
   }
 
   .footer-wrapper {
@@ -1305,12 +1364,12 @@ li {
   padding: 96px 20px 14px 20px;
 }
 
- .news-container {
-    height: 133px;
-  }
-
   .news-container-two {
   height: 157px;
+}
+
+.trend-link {
+  font-size: 12px;
 }
 
 .news-wrapper {
@@ -1318,7 +1377,7 @@ li {
   }
 
 .trend-pic-one{
-  margin-right: 0.5%;
+  margin-right: 4px;
   }
 
 .trend-pic-two {
@@ -1326,11 +1385,11 @@ li {
 }
 
 .trend-pic-two {
-  margin-right: 0.5%;
+  margin-right: 4px;
  }
 
 .trend-pic-three {
-  margin-right: 0.5%;
+  margin-right: 4px;
   }
 }
 
@@ -1427,7 +1486,7 @@ li {
   }
 
   .header-title {
-  font-size: 45px;
+  font-size: 30px;
   line-height: 1.2;
   width: 100%;
   margin: auto;
@@ -1437,6 +1496,19 @@ li {
 
 .trends {
   font-size: 12px;
+}
+
+.trend {
+  width: 100%;
+  height: 231px;
+}
+
+.trend-link {
+  font-size: 10px;
+}
+
+.news-wrapper {
+  font-size: 13px;
 }
 
 .content {
@@ -1463,7 +1535,7 @@ font-size: 12px;
   font-size: 12px;
 }
 
-.new__links {
+.new-links {
     padding-top: 15px;
   }
 
@@ -1580,8 +1652,8 @@ font-size: 12px;
 .shop-section {
     max-width: 640px;
     margin: auto;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
   .shop {
@@ -1590,8 +1662,7 @@ font-size: 12px;
   }
 
   .shop-item {
-    width: 99%;
-    margin-right: 1%;
+    width: 100%;
     padding-bottom: 55px;
   }
 
@@ -1630,6 +1701,7 @@ font-size: 12px;
 
 .shop-price-old {
   font-size: 10px;
+  margin-bottom: 5px;
 }
 
  .shop-pictures {
@@ -1660,8 +1732,8 @@ font-size: 12px;
   }
 
   .footer {
-    margin-right: 1%;
-    margin-left: 1%;
+    margin-right: 15px;
+    margin-left: 15px;
   }
 
   .footer-wrapper {
@@ -1682,6 +1754,11 @@ font-size: 12px;
     padding-right: 62pz;
     margin-bottom: 45px;
     font-size: 11px;
+}
+
+.popup {
+  max-width: 640px;
+  margin: auto;
 }
 
   .popup-container {
